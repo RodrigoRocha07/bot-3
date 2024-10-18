@@ -115,6 +115,20 @@ def run_script(url, chat_id):
         WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Por favor, confirme sua senha novamente']"))).send_keys('senha741')
         WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Preencha o nome verdadeiro e torne -o conveniente para a retirada posterior!']"))).send_keys(random_name) 
         driver.find_element(By.CLASS_NAME, 'van-button').click()
+        time.sleep(2)
+        driver.find_element(By.CLASS_NAME, "registerSuccess-close-OSMCv").click()
+        time.sleep(2)
+        driver.find_element(By.CLASS_NAME, "cms-close-btn-Xqx5l").click()
+        time.sleep(2)
+        driver.find_element(By.CLASS_NAME, "downloadPopup-close-rgQal").click()
+
+        WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//div[text()='Perfil']"))
+        ).click()
+        elemento = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, '//*[@id="app"]/div[1]/div[1]/div[2]/div[1]/div[2]/div/div/span[1]'))
+        )
+        print(elemento.text)
 
         message = "Dados de Acesso:"
         send_telegram_msg(bot_token, chat_id, message)
@@ -125,8 +139,11 @@ def run_script(url, chat_id):
         message2 = f"{current_proxy['host']}:{current_proxy['port']}:{current_proxy['username']}:{current_proxy['password']}"
         send_telegram_msg(bot_token, chat_id, message2)
 
-        message3 = "=================="
+        message3 = f"ID - {elemento.text}"
         send_telegram_msg(bot_token, chat_id, message3)
+
+        message4 = "=================="
+        send_telegram_msg(bot_token, chat_id, message4)
 
 
 

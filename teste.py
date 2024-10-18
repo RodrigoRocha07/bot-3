@@ -1,25 +1,37 @@
-from main import run_script
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+import random
+import string
+import time
+import subprocess
+import requests
+from fastapi import FastAPI, Path
+from pydantic import BaseModel
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.options import Options
+import json
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium import webdriver
 
-urls = {
-    
-    "italo": {
-        "url": "https://betx3.com/?id=337387816&currency=BRL&type=2",
-
-        "chat_id": "-4217070412"
-    },
-    "kely": {
-        "url": "https://betx3.com/?id=659920364&currency=BRL&type=2",
-        "chat_id": "-4283310871"
-    }
-
-}
-
-url_to_load = urls[nome_url]["url"]
-specific_chat_id = urls[nome_url]["chat_id"]
-
-if nome_url not in urls:
-    return {"error": "Nome da URL inválido. Use 'dara', 'italo' ou 'kely'."}
-
-run_script()
 
 
+service = Service("/usr/bin/chromedriver")
+driver = webdriver.Chrome(service=service) 
+
+
+driver.get("https://betsalfa.vip/home?id=510015589&type=1&currency=BRL")
+time.sleep(60)
+#//*[@id="js_tabbarWraps"]/div[5]/div/strong/div/svg/path[2]
+WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div[5]/div[2]/div[5]/div/strong/div/svg/path[1]"))
+).click()
+
+driver.quit()
