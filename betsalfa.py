@@ -122,12 +122,9 @@ def run_script(url, chat_id):
         time.sleep(2)
         driver.find_element(By.CLASS_NAME, "downloadPopup-close-rgQal").click()
 
-        WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "//div[text()='Perfil']"))
-        ).click()
-        elemento = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, '//*[@id="app"]/div[1]/div[1]/div[2]/div[1]/div[2]/div/div/span[1]'))
-        )
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//div[text()='Perfil']"))).click()
+
+        elemento = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="app"]/div[1]/div[1]/div[2]/div[1]/div[2]/div/div/span[1]')))
 
         print(f'Username: {random_username} ID- {elemento.text}')
 

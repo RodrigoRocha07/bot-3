@@ -202,7 +202,6 @@
 91.123.11.46:6312:allancard:allancard44
 91.123.11.85:6351:allancard:allancard44
 91.123.11.66:6332:allancard:allancard44
-91.123.10.224:6766:allantyr:allantyr7
 91.123.11.69:6335:allancard:allancard44
 91.123.11.127:6393:allancard:allancard44
 91.123.11.147:6413:allancard:allancard44
