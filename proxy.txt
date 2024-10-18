@@ -39,7 +39,6 @@
 91.123.10.134:6676:allancard:allancard44
 185.72.241.57:7349:allancard:allancard44
 91.123.11.226:6492:allancard:allancard44
-91.123.8.24:6564:allancard:allancard44
 23.129.252.84:6352:allancard:allancard44
 91.123.8.200:6740:allancard:allancard44
 185.72.241.250:7542:allancard:allancard44
@@ -182,7 +181,6 @@
 185.72.241.229:7521:allantyr:allantyr7
 185.72.241.236:7528:allantyr:allantyr7
 185.72.241.91:7383:allantyr:allantyr7
-185.72.241.73:7365:allantyr:allantyr7
 185.72.241.89:7381:allantyr:allantyr7
 185.72.241.254:7546:allantyr:allantyr7
 185.72.241.250:7542:allantyr:allantyr7

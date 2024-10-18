@@ -1093,3 +1093,5 @@
 91.123.10.181:6723:allancard:allancard44
 185.72.241.102:7394:allancard:allancard44
 91.123.11.51:6317:allancard:allancard44
+185.72.241.73:7365:allantyr:allantyr7
+91.123.8.24:6564:allancard:allancard44

@@ -128,7 +128,8 @@ def run_script(url, chat_id):
         elemento = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="app"]/div[1]/div[1]/div[2]/div[1]/div[2]/div/div/span[1]'))
         )
-        print(elemento.text)
+
+        print(f'Username: {random_username} ID- {elemento.text}')
 
         message = "Dados de Acesso:"
         send_telegram_msg(bot_token, chat_id, message)
